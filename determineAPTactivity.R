@@ -30,7 +30,7 @@ library(broom) # For turns outputs into tidy tibbles
 
 # i. Clean the whole dataset----
 ## Import the ML_dataset2.csv into R Studio----
-dat <- read.csv("C:/Users/juans/OneDrive - Edith Cowan University/MAT6206 - Data Analysis and Visualisation/Assessments/Assignment 2/ML_dataset2.csv", na.strings=NA, stringsAsFactors=TRUE)
+dat <- read.csv("path here", na.strings=NA, stringsAsFactors=TRUE)
 
 ## Replace NA as missing values on 99999 observations----
 dat$Average.ping.to.attacking.IP.milliseconds[dat$Average.ping.to.attacking.IP.milliseconds == 99999] <- NA
@@ -90,7 +90,7 @@ summary(dat)
 # iv. Creating training and test sets using an 30/70 split using student id----
 
 ## Set the random seed.----
-set.seed(10551059) 
+set.seed(IDNumberhere) 
 ## Get row numbers for the training data----
 trainRowNumbers <- createDataPartition(dat$APT, #The outcome variable
                                        p=0.30, #proportion of data to form the training set
